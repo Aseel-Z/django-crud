@@ -8,7 +8,7 @@ class Snack(models.Model):
     purchaser = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
         return reverse("snack_detail", args=[str(self.id)])

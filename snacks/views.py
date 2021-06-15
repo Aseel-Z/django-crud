@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Snack
@@ -14,13 +13,13 @@ class SnackDetailView(DetailView):
 class SnackUpdateView(UpdateView):
     template_name = "snack_update.html"
     model = Snack
-    fields = ["name", "rating", "reviewer"]
+    fields = ["title", "description", "purchaser"]
 
 
 class SnackCreateView(CreateView):
     template_name = "snack_create.html"
     model = Snack
-    fields = ["name", "rating", "reviewer"]
+    fields = ["title", "description", "purchaser"]
 
 
 class SnackDeleteView(DeleteView):
