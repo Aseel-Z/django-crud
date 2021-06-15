@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1>Update Page</h1>
+<form action="" method="post">
+    <!-- security -->
+    {% csrf_token %}
+    <!-- create form from views as paragraphs -->
+    {{ form.as_p }}
+    <input type="submit" value="SAVE">
+</form>
+
+
+{% endblock content %}
