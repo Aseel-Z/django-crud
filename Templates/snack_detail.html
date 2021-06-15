@@ -4,6 +4,7 @@
 
 <h2>Details about {{ snack.title}}</h2>
 <h2>Purchaser: {{ snack.purchaser }}</h2>
+<p>Description:{{snack.description}}</p>
 <p>{{ snack.rating }}</p>
 <a href="{% url 'snack_update' snack.pk %}">+ Update Snack</a>
 <a href="{% url 'snack_delete' snack.pk %}">+ Delete Snack</a>
