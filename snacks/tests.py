@@ -34,6 +34,7 @@ class SnackTests(TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertEqual(no_response.status_code, 404)
         self.assertContains(response, "Purchaser: aseel")
+        self.assertContains(response, "pocket of salted potato chips")
         self.assertTemplateUsed(response, "snack_detail.html")
 
     def test_snack_create_view(self):
